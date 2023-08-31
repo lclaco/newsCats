@@ -1,0 +1,8 @@
+<div class="container">
+    <ul class="list-group list-group-horizontal">
+        <% Reaction.kinds.each do |kind| %>
+            <li class="list-group-item justify-content-center align-items-center"><%= button_to "#{kind}", user_reaction_path(post_id: @post.id, kind: kind), method: :post, class:"btn" %></li>
+        <% end %>
+    </ul>
+</div>
+
